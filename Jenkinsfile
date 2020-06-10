@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'deploy war'
                 sshagent(['tomcat_cred']) {
-                sh 'scp -o StrictHostKeyChecking=no webapp/target/*.war ec2-user@13.126.142.10:/opt/tomcat/webapps'
+                sh 'scp -o StrictHostKeyChecking=no webapp/target/*.war ec2-user@13.232.102.250:/opt/tomcat/webapps'
               // sh 'ssh -o StrictHostKeyChecking=no -l cloudbees 13.126.142.10 uname -a'
                  }
             }
